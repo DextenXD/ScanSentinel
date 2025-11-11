@@ -1,0 +1,25 @@
+[project]
+name = "scansentinel"
+version = "0.1.0"
+description = "ScanSentinel is een snelle en eenvoudige Python-tool die je netwerk scant, open poorten detecteert en nieuwe apparaten opspoort. Perfect om je netwerk veilig en inzichtelijk te houden."
+authors = [
+    {name = "Dexten"}
+]
+readme = "README.md"
+requires-python = "^3.11"
+dependencies = [
+    "requests (>=2.32.5,<3.0.0)",
+    "schedule (>=1.2.2,<2.0.0)"
+]
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.0,<10.0.0)",
+    "black (>=25.11.0,<26.0.0)",
+    "mypy (>=1.18.2,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
