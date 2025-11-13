@@ -54,10 +54,10 @@ Dit project heet **ScanSentinel**. Wat is het doel van dit project? **ScanSentin
 | Week   | Doel / taken                                                        | Uren p/w | Commits (doel) |
 | ------ | ------------------------------------------------------------------- | -------: | :------------: |
 | Week 1 | Projectopzet, requirements, voorblad, repo init, basis CLI-skeleton |      6-8 |       3-5      |
-| Week 2 | IP-range parsing, CIDR ondersteuning, eenvoudige host discovery     |     8-10 |       4-6      |
+| Week 2 | IP-range parsing, CIDR ondersteuning, simpele host discovery     |     8-10 |       4-6      |
 | Week 3 | Threaded port scanner (ThreadPoolExecutor), connect-methodes        |     8-10 |       4-6      |
 | Week 4 | Error handling, timeouts, retries, input-validatie                  |      6-8 |       3-5      |
-| Week 5 | Resultaatopslag (JSON/CSV), eenvoudige reporter/exporter            |      6-8 |       3-5      |
+| Week 5 | Resultaatopslag (JSON/CSV), simpele reporter/exporter            |      6-8 |       3-5      |
 | Week 6 | Tests schrijven (pytest), mocking netwerkcalls, localhost tests     |      6-8 |       3-6      |
 | Week 7 | CLI polish, configuratiebestand (yaml/toml), logging toevoegen      |      4-6 |       2-4      |
 | Week 8 | Documentatie, readme uitbreiden, eindrapport & demo                 |      4-6 |       2-4      |
@@ -112,11 +112,11 @@ Dit project heet **ScanSentinel**. Wat is het doel van dit project? **ScanSentin
 
 ## Projectbroncode
 
-Repository: [github.com/DextenXD/ScanSentinel](https://github.com/DextenXD/ScanSentinel.git)
+[Repository](https://github.com/DextenXD/ScanSentinel.git)
 
 ---
 
-## To do / Uitbreidingen (optioneel)
+## Mogelijke uitbreidingen als ik tijd over heb
 
 * GUI (web-interface) voor rapportage
 * Nmap-compatibele output
@@ -125,11 +125,6 @@ Repository: [github.com/DextenXD/ScanSentinel](https://github.com/DextenXD/ScanS
 
 ---
 
-## Notities over ethiek & legaliteit
-
-Let op: portscans kunnen als inbreuk of ongewenste activiteit worden gezien wanneer ze op netwerken of hosts zonder toestemming worden uitgevoerd. Gebruik deze tool alleen op netwerken waarvoor je expliciete toestemming hebt.
-
----
 
 ### Contact
 

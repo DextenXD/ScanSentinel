@@ -1,0 +1,5 @@
+/scansentinel/__pycache__
+poetry.toml
+poetry.lock
+.env
+.venv

@@ -407,6 +407,18 @@ pygments = ">=2.7.2"
 dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "requests", "setuptools", "xmlschema"]
 
 [[package]]
+name = "pythonping"
+version = "1.1.4"
+description = "A simple way to ping in Python"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "pythonping-1.1.4-py3-none-any.whl", hash = "sha256:dedd690e36cb8c69703175610cf6ce01ff0c2070b447cc64c31a82951c9a53f6"},
+    {file = "pythonping-1.1.4.tar.gz", hash = "sha256:acef84640fee6f20b725f2a1d2392771f2845554cfabcef30b1fdea5030161af"},
+]
+
+[[package]]
 name = "pytokens"
 version = "0.3.0"
 description = "A Fast, spec compliant Python 3.14+ tokenizer that runs on older Pythons."
@@ -491,4 +503,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.11"
-content-hash = "0296d5be0f6c826528993666ecabb1e366044c0c870546642d6b00c01c11b61f"
+content-hash = "6cf382b2c10d7ab6c4d0daf71b1d29381fe090bd36d99b56dd2ce9783c887101"
