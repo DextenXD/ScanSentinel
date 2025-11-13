@@ -19,7 +19,6 @@ def run_config(args):
   return print("config configured")
 def run_report(args):
   return print("reporting")
-  return print(f"pinging {args.ip}")
 
 def main():
   parser = argparse.ArgumentParser(prog="scansentinel", description="Network scanning tool")
@@ -54,8 +53,8 @@ def main():
   # ===== subcommand: ping =====
   scan_parser = subparser.add_parser("ping", help="pings your ip or http")
   scan_parser.add_argument("--ip", nargs="*", required=True, help="Specify the IP")
-  scan_parser.add_argument("--c", "-count", nargs="*", required=False, help="Define how many times you want to ping")
-  scan_parser.add_argument("--t", "-timeout", nargs="*", required=False, help="Specify the timeout for pinging")
+  scan_parser.add_argument("--c", "-count", dest="count", nargs="*", required=False, help="Define how many times you want to ping")
+  scan_parser.add_argument("--t", "-timeout", dest="timeout", nargs="*", required=False, help="Specify the timeout for pinging")
   scan_parser.set_defaults(func=run_ping)
 
   # ===== subcommand: export as =====
