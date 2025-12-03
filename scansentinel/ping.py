@@ -14,7 +14,7 @@ def timeout(args):
     return None
 
 
-def run_ping(args):
+def runPing(args):
     try:
         if args.ip:
             ip = args.ip[0]
@@ -30,7 +30,15 @@ def run_ping(args):
 
     except KeyboardInterrupt:
         print(f"Exiting the program")
-    except RuntimeError:
-        print("Please provide a correct IP address")
+    except RuntimeError as e:
+        print(f"Please provide a correct IP address {e}")
     except Exception as e:
         print(f"unexpected error: {e}")
+
+
+def pingOnce(ip):
+    try:
+        resp = ping(ip, count=1, timeout=1)
+        return resp.success
+    except Exception:
+        return False

@@ -1,5 +1,5 @@
 import argparse
-from .ping import run_ping
+from .ping import runPing
 # from .scanner import Scanner
 
 def run_scan(args):
@@ -26,7 +26,8 @@ def main():
 
   # ===== subcommand: scan =====
   scan_parser = subparser.add_parser("scan", help="Scan a target IP for open ports")
-  scan_parser.add_argument("--ip", required=True, help="Target IP address to scan")
+  scan_parser.add_argument("--ip", help="Target IP address to scan")
+  scan_parser.add_argument("-r", "-range", help="Target IP range (192.168.1.1-254)")
   scan_parser.set_defaults(func=run_scan)
 
   # ===== subcommand: monitor =====
@@ -55,7 +56,7 @@ def main():
   scan_parser.add_argument("--ip", nargs="*", required=True, help="Specify the IP")
   scan_parser.add_argument("--c", "-count", dest="count", nargs="*", required=False, help="Define how many times you want to ping")
   scan_parser.add_argument("--t", "-timeout", dest="timeout", nargs="*", required=False, help="Specify the timeout for pinging")
-  scan_parser.set_defaults(func=run_ping)
+  scan_parser.set_defaults(func=runPing)
 
   # ===== subcommand: export as =====
   scan_parser = subparser.add_parser("export", help="Export data to your database or save as json")
