@@ -125,6 +125,17 @@ Dit project heet **ScanSentinel**. Wat is het doel van dit project? **ScanSentin
 
 ---
 
+## Hoe gebruikt ik het?
+
+**Commands**
+
+- Version `python -m scansentinel version`
+- Local Scan `python -m scansentinel scan --ip 127.0.0.1`
+- range Scan `python -m scansentinel scan --ip 192.168.1.1-10`
+- data export `python -m scansentinel scan --ip 127.0.0.1 --json resultaat.json`
+- monitor mode `python -m scansentinel monitor --ip 127.0.0.1 --ports 22 80 443`
+
+
 
 ### Contact
 

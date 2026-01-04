@@ -1,29 +1,27 @@
-from .ping import pingOnce
 from pythonping import ping
 
-def pingOnce(ip):
+class HostDiscovery:
+  def __init__(self, timeout=1):
+    self.timeout = timeout
+
+  def ping_host(self, ip):
+    """Stuurt 1 ping request. Return True als host online is."""
     try:
-        resp = ping(ip, count=1, timeout=1)
-        return resp.success
-    except Exception:
-        return False
+      response = ping(ip, count=1, timeout=self.timeout)
+      return response.success()
+    except Exception as e:
+      print(f"⚠️ EROOR {e}")
+      return False
+  
+  def discover(self, ip_list):
+    """Neemt een lijst IP's en returnt alleen de actives IP's."""
+    alive_hosts=[]
+    print(f"🔎 Checking for {len(ip_list)} hosts for activity...")
+
+    for ip in ip_list:
+      if self.ping_host(ip):
+        alive_hosts.append(ip)
+        print(f"[+] Host up: {ip}")
     
-def discover_hosts(ip_range):
-  start, end = ip_range.split("-")
-
-  # split first 3 octects
-  base = ".".join(start.split(".")[:3])
-
-  # takes start/end of host numbers
-  startNum = int(start.split(".")[:3])
-  endNum = int(end)
-
-  alive = []
-
-  # Nice loop die eerste stukje van ip pakt en dan checkt loopt van 1 tm 254
-  for i in range(startNum, endNum + 1):
-    ip = f"{base}.{i}"
-    if pingOnce(ip):
-      alive.append(ip)
-
-  return alive  
+    return alive_hosts
+    

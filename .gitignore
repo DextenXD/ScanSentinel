@@ -3,3 +3,4 @@ poetry.toml
 poetry.lock
 .env
 .venv
+*.json
