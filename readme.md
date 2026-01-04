@@ -136,6 +136,17 @@ Dit project heet **ScanSentinel**. Wat is het doel van dit project? **ScanSentin
 - monitor mode `python -m scansentinel monitor --ip 127.0.0.1 --ports 22 80 443`
 
 
+## Bronnen
+
+https://docs.pytest.org/en/stable/
+https://requests.readthedocs.io/en/latest/
+https://pypi.org/project/pythonping/
+https://docs.python.org/3/
+
+https://docs.python.org/3/library/concurrent.futures.html
+https://realpython.com/python3-object-oriented-programming/
+https://docs.python.org/3/library/unittest.mock.html
+https://docs.python.org/3/howto/argparse.html
 
 ### Contact
 
