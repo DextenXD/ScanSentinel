@@ -4,7 +4,7 @@ from .scanner import ScannerController
 controller = ScannerController()
 
 def run_scan(args):
-    controller.run_scan(target_inputs=args.ip, export_file=args.json)
+    controller.run_scan(target_input=args.ip, export_file=args.json)
 
 
 def run_monitor(args):

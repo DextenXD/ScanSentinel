@@ -10,7 +10,7 @@ class HostDiscovery:
       response = ping(ip, count=1, timeout=self.timeout)
       return response.success()
     except Exception as e:
-      print(f"⚠️ EROOR {e}")
+      print(f"⚠️ ERROR {e}")
       return False
   
   def discover(self, ip_list):

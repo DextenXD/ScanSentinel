@@ -4,13 +4,13 @@ from pythonping import ping
 
 def count(args):
     if args.count:
-        return int(args.count[0])  # converts the list to a int
+        return int(args.count[0])  
     return None
 
 
 def timeout(args):
     if args.timeout:
-        return int(args.timeout[0])  # converts the list to a int
+        return int(args.timeout[0])  
     return None
 
 
@@ -19,14 +19,14 @@ def runPing(args):
         if args.ip:
             ip = args.ip[0]
 
-            # stores args (if there are any)
+            
             ping_args = {}
             if args.count:
-                ping_args["count"] = count(args)  # adds count to the dictonary
+                ping_args["count"] = count(args)  
             if args.timeout:
-                ping_args["timeout"] = timeout(args)  # adds timeout to the dictonary
+                ping_args["timeout"] = timeout(args)  
 
-            ping(ip, verbose=True, **ping_args)  # unpacks the arguments
+            ping(ip, verbose=True, **ping_args) 
 
     except KeyboardInterrupt:
         print(f"Exiting the program")
